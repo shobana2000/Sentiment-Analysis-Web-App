@@ -2,11 +2,9 @@
 
 The Sentiment Analysis Web App allows users to analyze the sentiment of text input, providing insights into whether the given text is positive, negative, or neutral.
 
+![Screenshot 2023-12-20 120708](https://github.com/shobana2000/Sentiment_Analysis_Web_App/assets/48212587/4fb85c81-d2f6-45e0-8f24-ecbbd3d20e88)
 
-![Screenshot 2023-12-20 120708](https://github.com/shobana2000/Sentiment-Analysis-Web-App/assets/48212587/0b4c2195-afe7-47f2-8292-6cfe38a5af33)
-
-
-![Sentiment_Analysis_Web_App](https://github.com/shobana2000/Sentiment-Analysis-Web-App/assets/48212587/d9814e8c-9cdb-4a11-a32e-8d291177e0b1)
+![Sentiment_Analysis_Web_App](https://github.com/shobana2000/Sentiment_Analysis_Web_App/assets/48212587/9eb93aeb-032b-4b83-a2cc-8888f617457f)
 
 
 ## Features
