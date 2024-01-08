@@ -1,4 +1,4 @@
-# Sentiment-Analysis-Web-App
+# Sentiment_Analysis_Web_App
 
 The Sentiment Analysis Web App allows users to analyze the sentiment of text input, providing insights into whether the given text is positive, negative, or neutral.
 
