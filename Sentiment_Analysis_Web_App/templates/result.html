@@ -1,0 +1,27 @@
+<!-- templates/result_sentiment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="text-align:center;">
+    <h1>Sentiment Analysis Result</h1>
+
+<!--    <p><strong>Input Text:</strong></p>-->
+<!--    <p>{{ text }}</p>-->
+
+    <p><strong>Overall Sentiment:</strong> {{ overall_sentiment }}</p>
+    <p><strong>Positive Percentage:</strong> {{ positive_percentage }}%</p>
+    <p><strong>Negative Percentage:</strong> {{ negative_percentage }}%</p>
+
+    <div id="plot-container">
+        <img src="{{ plot_url }}" alt="Sentiment Analysis Results">
+    </div>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

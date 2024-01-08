@@ -1,0 +1,55 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: #f7f7f7;">
+    <div class="container">
+        <header>
+            <h1>Sentiment Analysis</h1>
+        </header>
+
+        <section class="sentiment-section">
+            <form action="/analyze" method="post" enctype="multipart/form-data">
+                <label for="text">Enter Text:</label>
+                <textarea name="text" rows="4" cols="50" placeholder="Enter your text here"></textarea>
+                <br>
+                <label for="file">Upload File:</label>
+                <input type="file" name="file" accept=".txt">
+                <br>
+                <button type="submit">Analyze</button>
+            </form>
+        </section>
+
+        {% if overall_sentiment %}
+        <section class="result-section" style="background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px;">
+            <h2>Analysis Result</h2>
+
+            <p><strong>Overall Sentiment:</strong> {{ overall_sentiment }}</p>
+            <p><strong>Positive Percentage:</strong> {{ positive_percentage }}%</p>
+            <p><strong>Negative Percentage:</strong> {{ negative_percentage }}%</p>
+
+            <div id="plot-container">
+                <img src="{{ plot_url }}" alt="Sentiment Analysis Results">
+            </div>
+        </section>
+        {% endif %}
+    </div>
+
+    <script>
+        function handleDrop(event) {
+            event.preventDefault();
+            document.getElementById('text').value = event.dataTransfer.getData('text');
+        }
+
+        function handleDragOver(event) {
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>
